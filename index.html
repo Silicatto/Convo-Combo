@@ -3,16 +3,59 @@
 <head>
     
     <title>Conversation Club</title>
+    <style>
+    body {
+
+    background-color: rgb(240, 240, 240);
+        
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+    height: 100vh;
+    margin: 0; 
+    }
+
+    .estatua {
+       height: 300px;
+       
+    }
+
+    .cartao-login {
+        background-color: white; 
+        border-radius: 30px; 
+        padding: 40px; 
+        width: 700px;
+        
+       
+        display: flex; 
+        align-items: center; 
+        justify-content: space-between; 
+    }
+
+    .formulario-login {
+       display: flex;
+       flex-direction: column; 
+    }
+
+            
+    </style>
    
 </head>
 
 <body>
-     <form>
+<div class="cartao-login">
+    <div>    
+     <form class="formulario-login">
         <h1>Login</h1>
         <input type="email" placeholder="Email" required>
         <input type="password" placeholder="Password" required>
         <button>Entrar</button>
      </form>
+        <a href="#">Proximo</a>
+    </div>
+        <img src="estatua.png" class="estatua">
+    </div>
 </body>
 
 </html>
