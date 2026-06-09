@@ -17,25 +17,38 @@
     }
 
     .estatua {
-       height: 300px;
+       height: 400px;
+       position: absolute;
+       bottom: 0;
+       right: 50px;
        
     }
 
-    .cartao-login {
-        background-color: white; 
-        border-radius: 30px; 
-        padding: 40px; 
-        width: 700px;
-        
-       
-        display: flex; 
-        align-items: center; 
-        justify-content: space-between; 
+    .bloco-login {
+        width: 50%;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        z-index: 2;
+
     }
+        
+    
 
     .formulario-login {
        display: flex;
        flex-direction: column; 
+    }
+
+    .container-principal {
+        background-color: white;
+        border: 2px solid #3b3561;
+        border-radius: 30px;
+        width: 800px;
+        height: 600px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
     }
 
             
@@ -44,8 +57,8 @@
 </head>
 
 <body>
-<div class="cartao-login">
-    <div>    
+<div class="container-principal">
+    <div class="bloco-login">
      <form class="formulario-login">
         <h1>Login</h1>
         <input type="email" placeholder="Email" required>
@@ -54,7 +67,7 @@
      </form>
         <a href="#">Proximo</a>
     </div>
-        <img src="estatua.png" class="estatua">
+        <img src="https://pngimg.com/uploads/statue_of_liberty/statue_of_liberty_PNG14.png" class="estatua">
     </div>
 </body>
 
