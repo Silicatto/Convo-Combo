@@ -6,14 +6,14 @@
     <style>
     body {
 
-    background-color: rgb(240, 240, 240);
+    background-color: rgb(255, 255, 255);
         
     display: flex;
-    justify-content: center;
+    justify-content: flex-start
+    padding left 50px;
 
-    align-items: center;
-    height: 100vh;
-    margin: 0; 
+    
+   
     }
 
     .estatua {
@@ -25,11 +25,12 @@
     }
 
     .bloco-login {
-        width: 50%;
-        padding: 40px;
-        display: flex;
-        flex-direction: column;
-        z-index: 2;
+      flex-direction: column;
+      display: flex;
+      justify-content: center;
+      width: 60%;
+      padding: 50px;
+      height: auto;
 
     }
         
@@ -38,15 +39,16 @@
     .formulario-login {
        display: flex;
        flex-direction: column; 
+       gap: 10px;
     }
 
     .container-principal {
-        background-color: white;
-        border: 2px solid #3b3561;
+        background-color: rgb(255, 255, 255);
+        border: none;
         border-radius: 30px;
         width: 800px;
-        height: 600px;
-        position: relative;
+        height: 500px;
+        
         overflow: hidden;
         display: flex;
     }
@@ -67,8 +69,7 @@
      </form>
         <a href="#">Proximo</a>
     </div>
-        <img src="https://pngimg.com/uploads/statue_of_liberty/statue_of_liberty_PNG14.png" class="estatua">
-    </div>
+</div>
 </body>
 
 </html>
