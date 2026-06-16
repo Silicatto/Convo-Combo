@@ -1,82 +1,133 @@
+<!DOCTYPE html>
 <html>
-
 <head>
-    
+    <meta charset="UTF-8">
     <title>Conversation Club</title>
     <style>
-
-    body {
-
-    background-color: rgb(255, 255, 255);
-    width: 60%;
-    padding: 50px;
-    margin-top: 80px;
-    display: flex;
-    justify-content: flex-start
-    padding left 50px;
-
-    
-   
-    }
-
-    .estatua {
-       height: 400px;
-       position: absolute;
-       bottom: 0;
-       right: 50px;
-       
-    }
-
-    .bloco-login {
-      flex-direction: column;
-      display: flex;
-      justify-content: center;
-      width: 60%;
-      padding: 50px;
-      height: auto;
-
-    }
         
-    
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
 
-    .formulario-login {
-       display: flex;
-       flex-direction: column; 
-       gap: 10px;
-    }
-
-    .container-principal {
-        background-color: rgb(255, 255, 255);
-        border: none;
-        border-radius: 30px;
-        width: 800px;
-        height: 500px;
         
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        
-    }
+        body {
+            background-color: #f0f2f5; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; 
+        }
 
+        .container-principal {
+            background-color: rgb(255, 255, 255);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
+            width: 800px;
+            height: 450px;
+            display: flex;
+            position: relative;
+            overflow: hidden;
+            padding: 40px 60px;
             
+            
+        }
+
+        .bloco-login {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; 
+            width: 50%;
+            z-index: 2; 
+        }
+
+        .formulario-login {
+            display: flex;
+            flex-direction: column; 
+            gap: 15px; /* Espaço entre os campos */
+            width: 80%;
+        }
+
+        
+        h1 {
+            background-color: #d1d1d1;
+            padding: 10px 25px;
+            border-radius: 20px;
+            width: max-content; 
+            font-size: 26px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .formulario-login input {
+            padding: 12px 20px;
+            border: 2px solid #000;
+            border-radius: 25px; 
+            font-size: 16px;
+            outline: none;
+        }
+
+        .formulario-login button {
+            background-color: #4b3e65;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            width: max-content;
+        }
+
+        .formulario-login button:hover {
+            background-color: #382d4d; 
+        }
+
+        .link-proximo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .estatua {
+            position: absolute;
+            bottom: 0;
+            right: 40px;
+            height: 90%; 
+            z-index: 1;
+        }
     </style>
-   
 </head>
 
 <body>
 <div class="container-principal">
+    
     <div class="bloco-login">
-     <form class="formulario-login">
-        <h1>Login</h1>
-        <input type="email" placeholder="Email" required>
-        <input type="password" placeholder="Password" required>
-        <button>Entrar</button>
-     </form>
-        <a href="#">Proximo</a>
+        <form class="formulario-login">
+            <h1>Login</h1>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Senha" required>
+            <button type="submit">Entrar</button>
+        </form>
+        
+        <a href="#" class="link-proximo">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 16 16 12 12 8"></polyline>
+                <line x1="8" y1="12" x2="16" y2="12"></line>
+            </svg>
+            Próximo
+        </a>
     </div>
-    <div>Teste</div>
+
+    <img src="https://pngimg.com/uploads/statue_of_liberty/statue_of_liberty_PNG14.png" alt="Estátua da Liberdade" class="estatua">
+
 </div>
 </body>
-
 </html>
