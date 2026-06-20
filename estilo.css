@@ -1,0 +1,94 @@
+body
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+h1
+{
+    font-size: 67px;
+    margin-bottom: 20px;
+}
+
+.container-dica
+{
+    width: 750px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.caixa-dica
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: gray;
+    width: 750px;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.texto
+{
+    font-size: 35px;
+    margin-right: 20px;
+}
+
+.butaoprox
+{
+    position: absolute;
+    bottom: 160px;
+    right: 550px;
+    font-size: 18px;
+    background: none;
+    text-decoration: none;
+    border: none;
+}
+
+#butaoprox1
+{
+    position: absolute;
+    bottom: 200px;
+    right: 550px;
+    font-size: 18px;
+}
+
+.butaovoltar
+{
+    position: absolute;
+    bottom: 160px;
+    right: 1250px;
+    font-size: 18px;
+    background: none;
+    text-decoration: none;
+    border: none;
+}
+
+.imgbutao
+{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    bottom: 187px;
+    right: 610px;
+    rotate: 90deg;
+}
+
+#imgant
+{
+    position: absolute;
+    bottom: 145px;
+    right: 1190px;
+    rotate: -90deg;
+}
+
+#imgbutao2
+{
+    bottom: 145px;
+    right: 610px;
+}
