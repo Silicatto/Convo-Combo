@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Pragmatica';
+    src: url(fonnts.com-Pragmatica_Ext_Light.otf);
+}
+
 body
 {
     display: flex;
@@ -11,6 +16,13 @@ h1
 {
     font-size: 67px;
     margin-bottom: 20px;
+}
+
+a
+{
+    font-family: 'Pragmatica';
+    text-decoration: none;
+    color: black;
 }
 
 .container-dica
@@ -50,14 +62,6 @@ h1
     border: none;
 }
 
-#butaoprox1
-{
-    position: absolute;
-    bottom: 200px;
-    right: 550px;
-    font-size: 18px;
-}
-
 .butaovoltar
 {
     position: absolute;
@@ -77,18 +81,4 @@ h1
     bottom: 187px;
     right: 610px;
     rotate: 90deg;
-}
-
-#imgant
-{
-    position: absolute;
-    bottom: 145px;
-    right: 1190px;
-    rotate: -90deg;
-}
-
-#imgbutao2
-{
-    bottom: 145px;
-    right: 610px;
 }
