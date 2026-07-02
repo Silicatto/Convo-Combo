@@ -42,7 +42,6 @@ a
     width: 750px;
     padding: 20px;
     border-radius: 20px;
-    position: relative;
 }
 
 .texto
@@ -51,34 +50,20 @@ a
     margin-right: 20px;
 }
 
-.butaoprox
+.butao
 {
-    position: absolute;
-    bottom: 160px;
-    right: 550px;
-    font-size: 18px;
-    background: none;
-    text-decoration: none;
-    border: none;
+    align-self: end;
+    font-size: 200%;
 }
 
-.butaovoltar
+.textbutao
 {
-    position: absolute;
-    bottom: 160px;
-    right: 1250px;
-    font-size: 18px;
-    background: none;
-    text-decoration: none;
-    border: none;
+    vertical-align: middle;
 }
 
 .imgbutao
 {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    bottom: 187px;
-    right: 610px;
-    rotate: 90deg;
+    transform: rotate(90deg);
+    vertical-align: middle;
 }
+
