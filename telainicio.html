@@ -1,1 +1,56 @@
+<html>
+    <head>
+        <style>
+            body {
+                background-image: url("BandeiraDeFundo.jpeg");
+                background-size: cover;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+            }
 
+            .botoes-base {
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+            }
+
+            .botao-retro {
+                background-color: #382d4d;
+                color: white;
+                padding: 10px 20px;
+                text-decoration: none;
+                border: 3px solid #000;
+                font-weight: bold;
+                
+            }
+
+            .botao-play {
+                background-color: transparent;
+                border: 3px solid #382d4d;
+                border-radius: 50%;
+                width: 80px;
+                height: 80px;
+                font-size: 30px;
+                color: #382d4d;
+                cursor: pointer;
+                margin: 30px 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Conversation Club</h1>
+        <p>Convo Combo</p>
+        <button class="botao-play">▶</button>
+       <div class="botoes-base">
+            <a href="index.html" class="botao-retro">Sign In</a>
+            <a href="participantes.html" class="botao-retro">About Us</a>
+       </div>
+    </body>
+</html>
