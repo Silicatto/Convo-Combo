@@ -1,7 +1,21 @@
-h1
+body
 {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    min-height: 100vh;
+}
+
+h1
+{
+    align-self: center;
+    font-size: 67px;
+}
+
+a
+{
+    color: white;
+    text-decoration: none;
 }
 
 .dificuldades
@@ -11,6 +25,8 @@ h1
     justify-content: space-evenly;
     align-items: center;
     background-color: darkblue;
-    color: white;
-    text-decoration: none;
+    min-width: 50vh;
+    min-height: 50vh;
+    font-size: 30px;
+    margin-top: 20px;
 }
