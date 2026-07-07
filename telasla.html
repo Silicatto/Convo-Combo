@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <style>
+            body { 
+                background-color: #ffffff;
+            }
+
+            .container-principal {
+                display: flex;
+                justify-content: space-between;
+                padding: 40px 80px; 
+                width: 900px;
+                height: 500px;
+                margin: 50px auto;
+                align-items: center;
+            }
+
+            .coluna-esquerda {
+                align-self: flex-start;
+                margin-top: 30px;
+            }
+
+            .coluna-esquerda h1 {
+                font-size: 54px;
+                margin: 0;
+            }
+
+            .coluna-direita {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 30px; 
+            }
+
+            .coluna-direita a {
+                text-decoration: none; 
+                color: black;          
+                font-size: 28px;       
+                font-weight: bold;     
+                display: flex;         
+                align-items: center;
+                gap: 15px;             
+                     
+            }
+
+            .icone-seta {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                width: 40px;
+                height: 40px;
+                border: 3px solid black;
+                border-radius: 10px; 
+                font-size: 20px;
+            }
+
+            
+        </style>
+    </head>
+    <body>
+        <div class="container-principal">
+            <div class="coluna-esquerda">
+                <h1>Convo Combo</h1>
+            </div>
+            <div class="coluna-direita">
+                <a href="#"><span class="icone-seta">➔</span> Começar</a>
+                <a href="comojogar1.html"><span class="icone-seta">➔</span> Como jogar</a>
+                <a href="#"><span class="icone-seta">➔</span> Ranking</a>
+                <a href="#"><span class="icone-seta">➔</span> Sair</a>
+            </div>
+        </div>
+    </body>
+</html>
