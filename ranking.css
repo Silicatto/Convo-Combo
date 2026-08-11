@@ -1,0 +1,24 @@
+body{
+    margin: 0;
+
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.posicoes{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#posicao{
+    display: flex;
+    flex-direction: row;
+    row-gap: 20px;
+    color: white;
+    background-color: black;
+}
