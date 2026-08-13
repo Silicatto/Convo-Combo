@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+  }
+
+body {
+    margin: 0;
+    background: #eee;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background-image: url('jornal.jpg'); 
+  }
+
+  h1 {
+    font-family: "Anton", sans-serif;
+    font-size: 70px;
+    font-weight: 400;
+    color: #e77517;
+  
+    letter-spacing: -1px;
+    line-height: 0.9;
+  }
+
+  .buttons button {
+    width: 55px;
+    height: 18px;
+  
+    padding: 0;
+  
+    font-size: 9px;
+    line-height: 14px;
+  }
