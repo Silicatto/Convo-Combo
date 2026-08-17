@@ -4,11 +4,10 @@
 
 body {
     margin: 0;
-    background: #eee;
+    background: #ffe0b1;
     display: grid;
     place-items: center;
-    min-height: 100vh;
-    background-image: url('jornal.jpg'); 
+    min-height: 100vh; 
   }
 
   h1 {
@@ -21,12 +20,71 @@ body {
     line-height: 0.9;
   }
 
-  .buttons button {
-    width: 55px;
-    height: 18px;
+  h2 {
+    font-family: "Anton", sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    color: #b34c10;
   
-    padding: 0;
-  
-    font-size: 9px;
-    line-height: 14px;
+    letter-spacing: -1px;
+    line-height: 0.9;
   }
+
+  main {
+    text-align: center;
+}
+
+
+  button {
+    width: 180px;
+    height: 50px;
+
+    padding: 0;
+
+    font-family: monospace;
+    font-size: 18px;
+    font-weight: bold;
+
+    background-color: #003366;
+    color: white;
+
+    border: 4px solid #001a33;
+    border-radius: 0;
+
+    display: block;
+    margin: 12px auto;
+
+    text-align: center;
+    cursor: pointer;
+
+    box-shadow: 5px 5px 0 #001a33;
+}
+
+button:hover {
+    background-color: #003972;
+}
+
+.decoracao {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 320px;
+
+  image-rendering: pixelated;
+  pointer-events: none;
+}
+
+.decoracao2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 95%;
+  height: 460px;
+
+  image-rendering: pixelated;
+  pointer-events: none;
+}
+ 
