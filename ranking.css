@@ -1,12 +1,25 @@
 body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
     margin: 0;
-
 }
 
 .container{
+    margin: auto;
     display: flex;
-    justify-content: center;
-    gap: 30px;
+    flex-direction: row;
+    position: relative;
+    gap: 30%;
+    background-color: grey;
+    padding: 30px;
+    border-radius: 10px;
+    width: 40%;
+}
+
+.container img{
+    align-self: center;
 }
 
 .posicoes{
@@ -15,10 +28,31 @@ body{
     gap: 20px;
 }
 
-#posicao{
+.posicao{
     display: flex;
     flex-direction: row;
     row-gap: 20px;
     color: white;
     background-color: black;
+    width: 200%;
+    border-radius: 20px;
+}
+
+.numero{
+    width: 80px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.nome{
+    flex: 1;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 18px;
+}
+
+.tempo{
+    width: 50px;
+    text-align: center;
+    font-size: 25px;
 }
