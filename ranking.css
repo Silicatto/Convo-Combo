@@ -1,9 +1,24 @@
+@font-face {
+    font-family: 'Pragmatica';
+    src: url(fonnts.com-Pragmatica_Ext_Light.otf);
+}
+
+
 body{
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
     margin: 0;
+    background-image: url(rankingbg.png);
+    background-size: 90%;
+}
+
+a
+{
+    font-family: 'Pragmatica';
+    text-decoration: none;
+    color: black;
 }
 
 .container{
@@ -11,31 +26,46 @@ body{
     display: flex;
     flex-direction: row;
     position: relative;
-    gap: 30%;
-    background-color: grey;
+    gap: 60%;
     padding: 30px;
     border-radius: 10px;
-    width: 40%;
+    width: 100%;
+    height: 75%;
 }
 
 .container img{
+    justify-content: flex-end;
     align-self: center;
+    height: 500;
 }
 
 .posicoes{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    justify-content: center;
+    gap: 50px;
 }
 
 .posicao{
     display: flex;
     flex-direction: row;
     row-gap: 20px;
-    color: white;
-    background-color: black;
-    width: 200%;
-    border-radius: 20px;
+    background-color: white;
+    width: 500%;
+    border: 5px solid black;
+    border-radius: 30px;
+}
+
+#first{
+    background-color: #d17220;
+}
+
+#second{
+    background-color: #3d5e8c;
+}
+
+#third{
+    background-color: #e4cdb1;
 }
 
 .numero{
@@ -55,4 +85,21 @@ body{
     width: 50px;
     text-align: center;
     font-size: 25px;
+}
+
+.butao{
+    position: fixed;
+    left: 35px;
+    bottom: 30px;
+}
+
+.textbutao
+{
+    vertical-align: middle;
+}
+
+.imgbutaoback
+{
+    transform: rotate(-90deg);
+    vertical-align: middle;
 }
