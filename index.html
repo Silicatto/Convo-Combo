@@ -22,7 +22,10 @@
         }
 
         .container-principal {
-            background-color: rgb(255, 255, 255);
+            background-image: url(folha.png);
+            background-size: 100% 100%;
+            background-position: center;
+            background-repeat: no-repeat;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
             width: 800px;
@@ -94,30 +97,9 @@
             font-weight: bold;
             font-size: 18px;
         }
+        
 
-        .estatua {
-            position: absolute;
-            bottom: 0;
-            right: 40px;
-            height: 99%; 
-            z-index: 1;
-        }
-
-        .bandeira-topE {
-            position:fixed;
-            top: 0;
-            left: 0;
-            width: 400px;
-            z-index: -1;
-        }
-
-        .bandeira-topD {
-            position:fixed;
-            top: 0;
-            right: 0;
-            width: 400px;
-            z-index: -1;
-        }
+   
     </style>
 </head>
 
@@ -132,8 +114,8 @@
             <input type="email" placeholder="Email" required>
             <input type="password" placeholder="Senha" required>
             <button type="submit">Entrar</button>
+            <button type="submit">Entrar como convidado</button>
         </form>
-        
         <a href="telainicio.html" class="link-proximo">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="10"></circle>
@@ -144,7 +126,7 @@
         </a>
     </div>
 
-    <img src="https://pngimg.com/uploads/statue_of_liberty/statue_of_liberty_PNG14.png" alt="Estátua da Liberdade" class="estatua">
+
 
 </div>
 </body>
