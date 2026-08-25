@@ -1,90 +1,122 @@
+* {
+    box-sizing: border-box;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
 @font-face {
-    font-family: 'Pragmatica';
+    font-family: "Papercutting";
+    src: url(Papercutting-Pvx2.ttf);
+}
+
+@font-face {
+    font-family: "Pragmatica";
     src: url(fonnts.com-Pragmatica_Ext_Light.otf);
 }
 
-body
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+body {
+    background: #ffffff;
+    display: grid;
+    overflow-y: hidden;
 }
 
-h1
-{
-    font-family: 'Pragmatica';
-    font-size: 67px;
-    margin-bottom: 20px;
+h1 {
+    font-family: "Papercutting";
+    font-size: 200px;
+    font-weight: 200;
+    color: #2d5077;
+    letter-spacing: -1px;
+    line-height: 0.9;
+    top: 15%;
+    left: 2.5%;
+    position: absolute;
 }
 
-a
-{
-    font-family: 'Pragmatica';
-    text-decoration: none;
-    color: black;
+main {
+    text-align: center;
 }
 
-.container-dica
-{
-    width: 750px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.caixa-dica
-{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: gray;
-    width: 750px;
-    padding: 20px;
-    border-radius: 20px;
-}
-
-.texto
-{
-    font-family: 'Pragmatica';
+p {
+    font-family: "Pragmatica";
     font-size: 35px;
-    margin-right: 100px;
+    font-weight: lighter;
+    position: absolute;
 }
 
-.butoes
-{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-between;
+a {
+    text-decoration: none;
+    color: #2d5077;
 }
 
-.butaoprox
-{
-    align-self: end;
-    font-size: 200%;
+.texto {
+    top: 42.5%;
+    left: 2.5%;
+    width: 50%;
+    box-sizing: border-box;
+    letter-spacing: -1px;
+    color: #2d5077;
 }
 
-.butaoback
-{
-    align-self: start;
-    font-size: 200%;
+.botao1 {
+    font-weight: bold;
+    top: 72.5%;
+    left: 2.5%;
 }
 
-.textbutao
-{
-    vertical-align: middle;
+.botao2 {
+    font-weight: bold;
+    top: 82.5%;
+    left: 2.5%;
 }
 
-.imgbutaoprox
-{
-    transform: rotate(90deg);
-    vertical-align: middle;
+.botaoback {
+    transform: rotate(180deg);
 }
 
-.imgbutaoback
-{
+.botaohome {
     transform: rotate(-90deg);
-    vertical-align: middle;
+}
+
+.tempo {
+    font-size: 125px;
+    font-weight: bolder;
+    letter-spacing: -5px;
+    word-spacing: -5px;
+    color: #e77517;
+    transform: rotate(-15deg);
+    display: inline-block;
+    position: absolute;
+    top: 22.5%; 
+    right: 20%;
+    text-shadow: 
+    -2px -2px 0 #2d5077,  
+     2px -2px 0 #2d5077,  
+    -2px  2px 0 #2d5077,  
+     2px  2px 0 #2d5077;
+}
+
+.papel {
+    height: auto;
+    width: 100%;
+    top: 50%;
+}
+
+.exclamacoes {
+    top: 37.5%;
+    right: 12.5%;
+    position: absolute;
+}
+
+.cartas {
+    top: 20%;
+    right: 7.5%;
+    position: absolute;
+    height: 50%;
+}
+
+.certinho {
+    top: 35%;
+    right: 12.5%;
+    position: absolute;
+    height: 40%;
 }

@@ -1,0 +1,60 @@
+button {
+    border-radius:40px;
+    width: 400px;
+    height: 170px;
+
+    padding: 0;
+
+    font-family: 'Trebuchet MS';
+    font-size: 50px;
+    font-weight: bold;
+
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+
+    border: 7px solid #db6a06;
+    border-radius: 10;
+
+    display: block;
+    margin: 12px auto;
+
+    text-align: center;
+    cursor: pointer;
+
+    box-shadow: 7px 7px 0 #0742e4;
+
+    text-decoration: none;
+}
+.link{
+    text-decoration: none;
+}
+button:hover {
+    background-color: #aaaaaa;
+}
+button:active{
+  transform: scale(0.8);
+}
+body{background-image: url(fundopapel.png);
+    margin: 0;
+    display: grid;
+    place-items: center;
+    min-height: 100vh; 
+}
+main{
+    text-align: center;
+}
+.botao{
+    position: fixed;
+    bottom:20px;
+    left:20px;
+}
+.cantolaranja{
+    position:absolute; left:-10px;
+    top: -30px;
+    width: 400px;
+}
+.cantoazul{
+    position:absolute; right: 0px;
+    bottom:0px
+
+}
