@@ -15,7 +15,7 @@
 }
 
 body {
-    background: #ffffff;
+    background-image: url(papel.png);
     display: grid;
     overflow-y: hidden;
 }
@@ -102,10 +102,5 @@ a {
 
 .cartas {
     width: 300px;
-    height: auto;
-}
-
-.certinho {
-    width: 150px;
     height: auto;
 }
