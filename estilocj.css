@@ -57,6 +57,12 @@ a {
     color: #2d5077;
 }
 
+.coisasmais {
+    top: 25%;
+    right: 12%;
+    position: absolute;
+}
+
 .botao1 {
     font-weight: bold;
     top: 72.5%;
@@ -71,6 +77,14 @@ a {
 
 .botaoback {
     transform: rotate(180deg);
+}
+
+.botaobackk{
+    transform: rotate(-90deg);
+}
+
+.botaoproxk{
+    transform: rotate(90deg);
 }
 
 .botaohome {
