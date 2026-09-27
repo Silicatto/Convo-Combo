@@ -1,70 +1,70 @@
 <html>
-    <head>
-        <title>Jogo</title>
-        <link rel="stylesheet" href="estilojg.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0/jquery.min.js"></script>
-        <script type="text/javascript" src="script.js"></script>
-    </head>
-    <body>
-        <img src="cards.png" height="250">
+  <head>
+    <title>Jogo</title>
+    <link rel="stylesheet" href="estilojg.css" />
 
-        <section class="falas">
-            <div class="fala1">
-                <p>Hi!!!!!</p>
-            </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0/jquery.min.js"></script>
 
-            <div class="fala2">
-                <p>Helloooo!!!!</p>
-            </div>
+    <script type="text/javascript" src="script.js" defer></script>
+  </head>
+  <body>
+    <img src="cards.png" height="250" />
 
-            <div class="fala1">
-                <p id="talk"></p>
-                <p id="talk2"></p>
-            </div>
+    <section class="falas">
+      <div class="fala1">
+        <p id="primeiraFala"></p>
+      </div>
 
-        </section>
+      <div class="fala2">
+        <p id="segundaFala"></p>
+      </div>
 
-        <div class="pts">
-            <img src="score.png" height="250">
-        </div>
+      <div class="fala1" id="balao1">
+        <p id="talk"></p>
+        <p id="talk2"></p>
+      </div>
+    </section>
 
-        <div class="pause">
-            <img src="pause.png" height="50">
-        </div>
+    <div class="pts">
+      <img src="score.png" height="250" />
+    </div>
 
-        <div class="cartas">
+    <div class="pause">
+      <img src="pause.png" height="50" />
+    </div>
 
-            <button>
-                <p>It's this way.</p>
-                <img src="cartaverm.png" height="250" onclick="verify('fala3')" />
-            </button>
-            
-            <button>
-                <p>Cool! Mine is mathematics.</p>
-                <img src="cartaazul.png" height="250" onclick="verify('fala1')" />
-            </button>
+    <div class="cartas">
+      <div class="cartas">
+        <button>
+          <p class="textoCarta"></p>
+          <img class="imagemCarta" src="cartaverm.png" height="250" />
+        </button>
 
-            <button>
-                <p>A crab!</p>
-                <img src="cartaverm.png" height="250" onclick="verify('fala4')" />
-            </button>
+        <button>
+          <p class="textoCarta"></p>
+          <img class="imagemCarta" src="cartaazul.png" height="250" />
+        </button>
 
-            <button>
-                <p>Thank you very much!</p>
-                <img src="cartaazul.png" height="250" onclick="verify('fala2')" />
-            </button>
+        <button>
+          <p class="textoCarta"></p>
+          <img class="imagemCarta" src="cartaverm.png" height="250" />
+        </button>
 
-            <button>
-                <p>I will check on that.</p>
-                <img src="cartaverm.png" height="250" onclick="verify('fala6')" />
-            </button>
-            
-            <button>
+        <button>
+          <p class="textoCarta"></p>
+          <img class="imagemCarta" src="cartaazul.png" height="250" />
+        </button>
 
-                <p>You might know!</p>
-                <img src="cartaazul.png" height="250" onclick="verify('fala5')" />
-            </button>
+        <button>
+          <p class="textoCarta"></p>
+          <img class="imagemCarta" src="cartaverm.png" height="250" />
+        </button>
 
-        </div>
-    </body>
+        <button>
+          <p class="textoCarta"></p>
+          <img class="imagemCarta" src="cartaazul.png" height="250" />
+        </button>
+      </div>
+    </div>
+  </body>
 </html>
