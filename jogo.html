@@ -8,8 +8,6 @@
     <script type="text/javascript" src="script.js" defer></script>
   </head>
   <body>
-    <img src="cards.png" height="250" />
-
     <section class="falas">
       <div class="fala1">
         <p id="primeiraFala"></p>
@@ -21,16 +19,19 @@
 
       <div class="fala1" id="balao1">
         <p id="talk"></p>
+      </div>
+      <div class="fala1" id="verificador">
         <p id="talk2"></p>
       </div>
     </section>
 
     <div class="pts">
-      <img src="score.png" height="250" />
+      <h1 id="pts">0</h1>
+      <h1 id="timer">5:00</h1>
     </div>
 
     <div class="pause">
-      <img src="pause.png" height="50" />
+      <button onclick="pausar()"><img src="pause.png" height="50" /></button>
     </div>
 
     <div class="cartas">
@@ -65,6 +66,12 @@
           <img class="imagemCarta" src="cartaazul.png" height="250" />
         </button>
       </div>
+    </div>
+    <!-- Tela de pause: fica escondida até o jogador clicar no botão de pause -->
+    <div id="telaPause" class="tela-pause">
+      <button id="btnResume" class="opcao-pause">RESUME</button>
+      <button id="btnRestart" class="opcao-pause">RESTART</button>
+      <button id="btnQuit" class="opcao-pause">QUIT</button>
     </div>
   </body>
 </html>
