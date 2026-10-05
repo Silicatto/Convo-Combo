@@ -178,15 +178,120 @@ function tema(tema){
             //Faz a primeira e segunda fala aparecerem na tela
             $('#primeiraFala').text(falasHouse.fala1);
             $('#segundaFala').text(falasHouse.fala2);
-
             //Define a resposta correta e as falas atuais
             respostaCorreta = 'fala3';
             falasAtuais = falasHouse;
             criarCartas(falasHouse);
             break;
+    
+            //parte pro medium
+
+        case 'job':
+            let falasJob = {};
+
+            falasJob = {
+                fala1: "You've been receiving a lot of packages lately.",
+                fala2: "I've developed a habit of browsing online stores at night.",
+                fala3: "Aren't you worried about buying useless things?",
+                fala4: "You're right, I often fall for the advertising.",
+                fala5: "Maybe you should set a monthly spending limit.",
+                fala6: "That's smart, but self-control isn't easy.",
+                fala7: "I can help you review your cart before checkout.",
+                fala8: "I have no idea what to buy for my friend's birthday.",
+                fala9: "What are their main interests or hobbies?",
+                fala10: "They love photography, but already have all the gear.",
+                fala11: "Perhaps a workshop or experience would be better.",
+                fala12: "That's a wonderful idea, maybe a photography course.",
+                fala13: "Experiences often create more lasting memories.",
+                fala14: "You're right, I'll book something.",
+                fala15: "I'm trying to support local shops more often.",
+                fala16: "That's admirable, though it's not very convenient.",
+                fala17: "True, I sometimes visit several stores to find things.",
+                fala18: "Have you discovered any good local markets?",
+                fala19: "There's one on Saturdays, but it's closed in winter.",
+                fala20: "You could also order online from local artisans.",
+                fala21: "I'll look into that, it sounds like a great idea."
+            };
+
+            $('#primeiraFala').text(falasJob.fala1);
+            $('#segundaFala').text(falasJob.fala2);
+
+            respostaCorreta = 'fala3';
+            falasAtuais = falasJob;
+            criarCartas(falasJob);
+            break;
+        
+        case 'tech':
+            let falasTech = {};
+
+            falasJob = {
+                fala1: "I'm increasingly concerned about digital privacy.",
+                fala2: "You're not the only one, data collection is out of control.",
+                fala3: "What steps have you taken to protect yourself?",
+                fala4: "I use encryption and review app permissions carefully.",
+                fala5: "Still, I feel our data is constantly being exploited.",
+                fala6: "That's because most platforms profit from our information.",
+                fala7: "Stronger privacy laws would definitely help.",
+                fala8: "I've decided to use social media much less.",
+                fala9: "What made you come to that decision?",
+                fala10: "I realised it was harming my mental health.",
+                fala11: "That's very smart, most people end up ignoring that.",
+                fala12: "Constant comparison makes me feel uncomfortable.",
+                fala13: "Have you noticed any benefits since reducing usage?",
+                fala14: "Definitely, I feel a lot calmer and more focused.",
+                fala15: "Our company recently had a serious security breach.",
+                fala16: "That's alarming, was any data stolen?",
+                fala17: "Fortunately, our encryption prevented any major damage.",
+                fala18: "Did you find out how the attack happened?",
+                fala19: "It was a phishing email sent to an employee.",
+                fala20: "Better training could prevent this in the future.",
+                fala21: "We're implementing that immediately."
+            };
+
+            $('#primeiraFala').text(falasTech.fala1);
+            $('#segundaFala').text(falasTech.fala2);
+
+            respostaCorreta = 'fala3';
+            falasAtuais = falasTech;
+            criarCartas(falasTech);
+            break;
+
+        case 'Music':
+            let falasMusic = {};
+
+            falasMusic = {
+                fala1: "I've been listening to a lot of classical music lately.",
+                fala2: "What attracts you to that genre?",
+                fala3: "I love the complexity of the pieces.",
+                fala4: "Do you prefer older or more modern composers?",
+                fala5: "I'm more drawn to the older ones.",
+                fala6: "That music really touches the soul, doesn't it?",
+                fala7: "Exactly, it's much more than simple entertainment.",
+                fala8: "I've been learning to play the piano for two years.",
+                fala9: "That's impressive, what inspired you to start?",
+                fala10: "I've always loved the instrument's range of sounds.",
+                fala11: "What's the hardest part about learning?",
+                fala12: "Using both hands independently is difficult.",
+                fala13: "Regular practice is essential for improving.",
+                fala14: "Yes, I'm learning to be patient with that.",
+                fala15: "I've started producing my own electronic music.",
+                fala16: "That sounds fascinating, what software do you use?",
+                fala17: "I'm using a professional program with many features.",
+                fala18: "Have you explored sound design yet?",
+                fala19: "I'm slowly learning, but it's quite complex.",
+                fala20: "The possibilities are endless once you master it.",
+                fala21: "I'm enjoying the journey, even when it's difficult."
+            };
+
+            $('#primeiraFala').text(falasMusic.fala1);
+            $('#segundaFala').text(falasMusic.fala2);
+
+            respostaCorreta = 'fala3';
+            falasAtuais = falasMusic;
+            criarCartas(falasMusic);
+            break;
     }
 }
-
 tema(temaEscolhido);
 
 function verificar_fala(fala){
