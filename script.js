@@ -186,6 +186,122 @@ function tema(tema){
     
             //parte pro medium
 
+         case 'movies':
+            let falasJob = {};
+
+            falasJob = {
+                fala1: "Have you watched any good films recently?",
+                fala2: "Yes, I saw a great sci-fi movie last weekend.",
+                fala3: "What did you like about it?",
+                fala4: "The visual effects and the story were amazing.",
+                fala5: "I'll watch it this week then.",
+                fala6: "What kind of movies do you prefer?",
+                fala7: "I really enjoy thrillers and mystery films.",
+                fala8: "Don't you find them too stressful sometimes?",
+                fala9: "Not at all, I love the suspense and twists.",
+                fala10: "Everyone has their own taste, I suppose.",
+                fala11: "What did you think of that horror film?",
+                fala12: "Honestly, I found it quite predictable.",
+                fala13: "Really? I thought the ending was intense.",
+                fala14: "Maybe I've seen too many horror movies.",
+                fala15: "That could be the reason, actually.",
+            };
+
+            $('#primeiraFala').text(falasJob.fala1);
+            $('#segundaFala').text(falasJob.fala2);
+
+            respostaCorreta = 'fala3';
+            falasAtuais = falasJob;
+            criarCartas(falasJob);
+            break;
+
+        case 'food':
+            let falasJob = {};
+
+            falasJob = {
+                fala1: "What's your favourite type of cuisine?",
+                fala2: "I really enjoy Italian food, especially pasta.",
+                fala3: "Have you ever tried making it from scratch?",
+                fala4: "Yes, but it takes a lot of time.",
+                fala5: "The result is certainly worth the effort though.",
+                fala6: "Are you a fan of spicy food?",
+                fala7: "I like it, but only in small amounts.",
+                fala8: "I can't handle too much heat at all.",
+                fala9: "You should try milder versions first.",
+                fala10: "That's good advice, I'll do that.",
+                fala11: "Have you ever tried any exotic dishes?",
+                fala12: "Yes, I tried some interesting dishes during my travels.",
+                fala13: "Were they tasty or strange?",
+                fala14: "Some were delicious, others were quite unusual.",
+                fala15: "That's part of the adventure, I think.",
+            };
+
+            $('#primeiraFala').text(falasJob.fala1);
+            $('#segundaFala').text(falasJob.fala2);
+
+            respostaCorreta = 'fala3';
+            falasAtuais = falasJob;
+            criarCartas(falasJob);
+            break;
+
+        case 'sports':
+            let falasJob = {};
+
+            falasJob = {
+                fala1: "What sport do you do regularly?",
+                fala2: "I play volleyball twice a week.",
+                fala3: "Do you enjoy swimming?",
+                fala4: "Yes, I go swimming on weekends too.",
+                fala5: "That's a great combination for fitness.",
+                fala6: "Would you ever try extreme sports?",
+                fala7: "No, I prefer safer activities like cycling.",
+                fala8: "I find the adrenaline rush addictive.",
+                fala9: "To each their own, safety comes first for me.",
+                fala10: "That's completely understandable.",
+                fala11: "How often do you exercise each week?",
+                fala12: "I go to the gym about four times.",
+                fala13: "Do you do more cardio or weights?",
+                fala14: "I mix both, it's more balanced.",
+                fala15: "That sounds like a solid routine.",
+            };
+
+            $('#primeiraFala').text(falasJob.fala1);
+            $('#segundaFala').text(falasJob.fala2);
+
+            respostaCorreta = 'fala3';
+            falasAtuais = falasJob;
+            criarCartas(falasJob);
+            break;
+
+        case 'animals':
+            let falasJob = {};
+
+            falasJob = {
+                fala1: "Do you have any pets at home?",
+                fala2: "Yes, I have a dog and two cats.",
+                fala3: "That must be a lot of work.",
+                fala4: "It is, but they bring a lot of joy.",
+                fala5: "Yeah, that makes it all worth it.",
+                fala6: "What's your favourite wild animal?",
+                fala7: "I love elephants, they're so intelligent.",
+                fala8: "They also have great memory, don't they?",
+                fala9: "Yes, and they show empathy too.",
+                fala10: "I'd love to see them in nature one day.",
+                fala11: "Are you afraid of any animals?",
+                fala12: "I'm terrified of snakes, they scare me.",
+                fala13: "Really? I find them quite fascinating.",
+                fala14: "I know it's irrational, but I can't help it.",
+                fala15: "Many people feel that way about them.",
+            };
+
+            $('#primeiraFala').text(falasJob.fala1);
+            $('#segundaFala').text(falasJob.fala2);
+
+            respostaCorreta = 'fala3';
+            falasAtuais = falasJob;
+            criarCartas(falasJob);
+            break;
+            
         case 'job':
             let falasJob = {};
 
