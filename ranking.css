@@ -10,7 +10,7 @@ body{
     justify-content: center;
     min-height: 100vh;
     margin: 0;
-    background-image: url(papel.png);
+    background-image: url(papelbg.png);
     background-size: 90%;
 }
 
@@ -102,3 +102,4 @@ a
     transform: rotate(-90deg);
     vertical-align: middle;
 }
+
