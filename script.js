@@ -185,36 +185,7 @@ function tema(tema){
             break;
     
             //parte pro medium
-
-         case 'movies':
-            let falasMovies = {};
-
-            falasJob = {
-                fala1: "Have you watched any good films recently?",
-                fala2: "Yes, I saw a great sci-fi movie last weekend.",
-                fala3: "What did you like about it?",
-                fala4: "The visual effects and the story were amazing.",
-                fala5: "I'll watch it this week then.",
-                fala6: "What kind of movies do you prefer?",
-                fala7: "I really enjoy thrillers and mystery films.",
-                fala8: "Don't you find them too stressful sometimes?",
-                fala9: "Not at all, I love the suspense and twists.",
-                fala10: "Everyone has their own taste, I suppose.",
-                fala11: "What did you think of that horror film?",
-                fala12: "Honestly, I found it quite predictable.",
-                fala13: "Really? I thought the ending was intense.",
-                fala14: "Maybe I've seen too many horror movies.",
-                fala15: "That could be the reason, actually.",
-            };
-
-            $('#primeiraFala').text(falasJob.fala1);
-            $('#segundaFala').text(falasJob.fala2);
-
-            respostaCorreta = 'fala3';
-            falasAtuais = falasJob;
-            criarCartas(falasJob);
-            break;
-
+            
         case 'food':
             let falasFood = {};
 
@@ -243,7 +214,36 @@ function tema(tema){
             falasAtuais = falasJob;
             criarCartas(falasJob);
             break;
+            
+         case 'movies':
+            let falasMovies = {};
 
+            falasJob = {
+                fala1: "Have you watched any good films recently?",
+                fala2: "Yes, I saw a great sci-fi movie last weekend.",
+                fala3: "What did you like about it?",
+                fala4: "The visual effects and the story were amazing.",
+                fala5: "I'll watch it this week then.",
+                fala6: "What kind of movies do you prefer?",
+                fala7: "I really enjoy thrillers and mystery films.",
+                fala8: "Don't you find them too stressful sometimes?",
+                fala9: "Not at all, I love the suspense and twists.",
+                fala10: "Everyone has their own taste, I suppose.",
+                fala11: "What did you think of that horror film?",
+                fala12: "Honestly, I found it quite predictable.",
+                fala13: "Really? I thought the ending was intense.",
+                fala14: "Maybe I've seen too many horror movies.",
+                fala15: "That could be the reason, actually.",
+            };
+
+            $('#primeiraFala').text(falasJob.fala1);
+            $('#segundaFala').text(falasJob.fala2);
+
+            respostaCorreta = 'fala3';
+            falasAtuais = falasJob;
+            criarCartas(falasJob);
+            break;
+            
         case 'sports':
             let falasSports = {};
 
@@ -301,6 +301,8 @@ function tema(tema){
             falasAtuais = falasJob;
             criarCartas(falasJob);
             break;
+
+            //parte pro hard
             
         case 'job':
             let falasJob = {};
