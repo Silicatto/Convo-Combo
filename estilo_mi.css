@@ -112,13 +112,11 @@ button:active{
   text-decoration: none;
   width: 80px;
   height: 50px;
+}
 
-  }
-
-  
 .link-Ranking{ 
   position: fixed;
   right: 30px; 
   align-self: center;
-  height: 850;
+  height: 850px;
 }
