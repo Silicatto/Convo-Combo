@@ -184,7 +184,7 @@ function tema(tema){
             criarCartas(falasHouse);
             break;
     
-            //parte pro medium
+            //parte pro medium - Keren
             
         case 'food':
             let falasFood = {};
@@ -207,12 +207,12 @@ function tema(tema){
                 fala15: "That's part of the adventure, I think.",
             };
 
-            $('#primeiraFala').text(falasJob.fala1);
-            $('#segundaFala').text(falasJob.fala2);
+            $('#primeiraFala').text(falasFood.fala1);
+            $('#segundaFala').text(falasFood.fala2);
 
             respostaCorreta = 'fala3';
-            falasAtuais = falasJob;
-            criarCartas(falasJob);
+            falasAtuais = falasFood;
+            criarCartas(falasFood);
             break;
             
          case 'movies':
@@ -236,12 +236,12 @@ function tema(tema){
                 fala15: "That could be the reason, actually.",
             };
 
-            $('#primeiraFala').text(falasJob.fala1);
-            $('#segundaFala').text(falasJob.fala2);
+            $('#primeiraFala').text(falasMovies.fala1);
+            $('#segundaFala').text(falasMovies.fala2);
 
             respostaCorreta = 'fala3';
-            falasAtuais = falasJob;
-            criarCartas(falasJob);
+            falasAtuais = falasMovies;
+            criarCartas(falasMovies);
             break;
             
         case 'sports':
@@ -265,12 +265,12 @@ function tema(tema){
                 fala15: "That sounds like a solid routine.",
             };
 
-            $('#primeiraFala').text(falasJob.fala1);
-            $('#segundaFala').text(falasJob.fala2);
+            $('#primeiraFala').text(falasSports.fala1);
+            $('#segundaFala').text(falasSports.fala2);
 
             respostaCorreta = 'fala3';
-            falasAtuais = falasJob;
-            criarCartas(falasJob);
+            falasAtuais = falasSports;
+            criarCartas(falasSports);
             break;
 
         case 'animals':
@@ -294,15 +294,15 @@ function tema(tema){
                 fala15: "Many people feel that way about them.",
             };
 
-            $('#primeiraFala').text(falasJob.fala1);
-            $('#segundaFala').text(falasJob.fala2);
+            $('#primeiraFala').text(falasAnimals.fala1);
+            $('#segundaFala').text(falasAnimals.fala2);
 
             respostaCorreta = 'fala3';
-            falasAtuais = falasJob;
-            criarCartas(falasJob);
+            falasAtuais = falasAnimals;
+            criarCartas(falasAnimals);
             break;
 
-            //parte pro hard
+            //parte pro hard - Gutemberg
             
         case 'job':
             let falasJob = {};
