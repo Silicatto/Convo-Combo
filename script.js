@@ -187,7 +187,7 @@ function tema(tema){
             //parte pro medium
 
          case 'movies':
-            let falasJob = {};
+            let falasMovies = {};
 
             falasJob = {
                 fala1: "Have you watched any good films recently?",
@@ -216,7 +216,7 @@ function tema(tema){
             break;
 
         case 'food':
-            let falasJob = {};
+            let falasFood = {};
 
             falasJob = {
                 fala1: "What's your favourite type of cuisine?",
@@ -245,7 +245,7 @@ function tema(tema){
             break;
 
         case 'sports':
-            let falasJob = {};
+            let falasSports = {};
 
             falasJob = {
                 fala1: "What sport do you do regularly?",
@@ -274,7 +274,7 @@ function tema(tema){
             break;
 
         case 'animals':
-            let falasJob = {};
+            let falasAnimals = {};
 
             falasJob = {
                 fala1: "Do you have any pets at home?",
