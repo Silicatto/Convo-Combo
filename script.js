@@ -96,9 +96,11 @@ function tema(tema){
                 fala1: "Hello, what's your favorite subject?",
                 fala2: "Hi, mine is Biology, what about yours?",
                 fala3: 'Cool! Mine is mathematics.',
+
                 fala4: 'Hey, can you borrow a pen?',
                 fala5: 'Of course, here it is.',
                 fala6: "Thank you, I'll give it back soon!",
+
                 fala7: 'Hello, Do you know where class 203 is?',
                 fala8: "Oh Hi, it's in the next corridor!",
                 fala9: 'Thank you very much!'
@@ -434,8 +436,6 @@ function verificar_fala(fala){
         $("#pts").text(pontos);
     }
 }
-
-// ===================== TELA DE PAUSE =====================
 
 // Pausa o jogo: escurece a tela, para o timer e bloqueia os botões
 function pausar() {
