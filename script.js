@@ -416,7 +416,17 @@ tema(temaEscolhido);
 
 function verificar_fala(fala){
     if (jogoPausado) {
-        return; // não deixa jogar enquanto estiver pausado
+        return;
+    }
+
+    var img = document.querySelector('img[onclick*="' + fala + '"]');
+
+    if (img && img.dataset.respondida === "true") {
+        return; // já respondida, não pontua de novo
+    }
+    if (img) {
+        img.dataset.respondida = "true";
+        $(img).closest(".carta").addClass("respondida");
     }
 
     if (fala == respostaCorreta){
@@ -425,7 +435,6 @@ function verificar_fala(fala){
         $("#balao1").css('background-color', 'green');
         $("#balao1").css('color', 'white');
         pontos += 15;
-        $("#pts").text(pontos);
     }
     else{
         $("#talk").text(falasAtuais[fala]);
@@ -433,9 +442,11 @@ function verificar_fala(fala){
         $("#balao1").css('background-color', 'darkred');
         $("#balao1").css('color', 'white');
         pontos -= 15;
-        $("#pts").text(pontos);
     }
+
+    $("#pts").text(pontos);
 }
+
 
 // Pausa o jogo: escurece a tela, para o timer e bloqueia os botões
 function pausar() {
