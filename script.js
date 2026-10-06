@@ -189,7 +189,7 @@ function tema(tema){
         case 'food':
             let falasFood = {};
 
-            falasJob = {
+            falasFood = {
                 fala1: "What's your favourite type of cuisine?",
                 fala2: "I really enjoy Italian food, especially pasta.",
                 fala3: "Have you ever tried making it from scratch?",
@@ -218,7 +218,7 @@ function tema(tema){
          case 'movies':
             let falasMovies = {};
 
-            falasJob = {
+            falasMovies = {
                 fala1: "Have you watched any good films recently?",
                 fala2: "Yes, I saw a great sci-fi movie last weekend.",
                 fala3: "What did you like about it?",
@@ -247,7 +247,7 @@ function tema(tema){
         case 'sports':
             let falasSports = {};
 
-            falasJob = {
+            falasSports = {
                 fala1: "What sport do you do regularly?",
                 fala2: "I play volleyball twice a week.",
                 fala3: "Do you enjoy swimming?",
@@ -276,7 +276,7 @@ function tema(tema){
         case 'animals':
             let falasAnimals = {};
 
-            falasJob = {
+            falasAnimals = {
                 fala1: "Do you have any pets at home?",
                 fala2: "Yes, I have a dog and two cats.",
                 fala3: "That must be a lot of work.",
@@ -342,7 +342,7 @@ function tema(tema){
         case 'tech':
             let falasTech = {};
 
-            falasJob = {
+            falasTech = {
                 fala1: "I'm increasingly concerned about digital privacy.",
                 fala2: "You're not the only one, data collection is out of control.",
                 fala3: "What steps have you taken to protect yourself?",
