@@ -21,13 +21,13 @@ function mostrarTempo() {
     $("#timer").text(minutos + ":" + segundos);
 }
 
-// Liga o timer (continua de onde o "tempo" estiver)
+// Liga o timer / continua de onde o tempo tava
 function iniciarTimer() {
     if (intervalo !== null || tempo <= 0) {
         return; // já está rodando ou o tempo acabou
     }
 
-    intervalo = setInterval(function() {
+    intervalo = setInterval(function () {
         tempo--;
         mostrarTempo();
 
@@ -37,32 +37,31 @@ function iniciarTimer() {
     }, 1000);
 }
 
-// Desliga o timer sem mexer no tempo restante
+// Desliga o timer
 function pararTimer() {
     clearInterval(intervalo);
     intervalo = null;
 }
 
 // Só inicia o timer se estiver na tela do jogo
-if (document.getElementById("timer")) {
+if ($("#timer").length > 0) {
     mostrarTempo();
     iniciarTimer();
 }
 
 function criarCartas(falas) {
-
     let chaves = Object.keys(falas);
 
     // Garante que a resposta correta esteja nas cartas
-    let cartas = ['fala3'];
+    let cartas = ["fala3"];
 
     // Retira a fala3 para não escolhê-la novamente
-    let outrasFalas = chaves.filter(function(chave) {
-        return chave != 'fala3';
+    let outrasFalas = chaves.filter(function (chave) {
+        return chave != "fala3";
     });
 
     // Embaralha as outras falas
-    outrasFalas.sort(function() {
+    outrasFalas.sort(function () {
         return Math.random() - 0.5;
     });
 
@@ -70,125 +69,123 @@ function criarCartas(falas) {
     cartas = cartas.concat(outrasFalas.slice(0, 5));
 
     // Embaralha as 6 cartas
-    cartas.sort(function() {
+    cartas.sort(function () {
         return Math.random() - 0.5;
     });
 
     // Coloca as falas nas cartas
-    $(".textoCarta").each(function(index) {
-
+    $(".textoCarta").each(function (index) {
         $(this).text(falas[cartas[index]]);
 
-        $(this).siblings("img").attr(
-            "onclick",
-            "verificar_fala('" + cartas[index] + "')"
-        );
-
+        $(this)
+            .siblings("img")
+            .attr("onclick", "verificar_fala('" + cartas[index] + "')");
     });
 }
 
-function tema(tema){
-    switch (tema){
-        case 'school':
+function tema(tema) {
+    switch (tema) {
+        //Parte do easy - Kaíque
+        case "school":
             let falasSchool = {};
 
             falasSchool = {
                 fala1: "Hello, what's your favorite subject?",
                 fala2: "Hi, mine is Biology, what about yours?",
-                fala3: 'Cool! Mine is mathematics.',
+                fala3: "Cool! Mine is mathematics.",
 
-                fala4: 'Hey, can you borrow a pen?',
-                fala5: 'Of course, here it is.',
+                fala4: "Hey, can you borrow a pen?",
+                fala5: "Of course, here it is.",
                 fala6: "Thank you, I'll give it back soon!",
 
-                fala7: 'Hello, Do you know where class 203 is?',
+                fala7: "Hello, Do you know where class 203 is?",
                 fala8: "Oh Hi, it's in the next corridor!",
-                fala9: 'Thank you very much!'
+                fala9: "Thank you very much!",
             };
 
-            $('#primeiraFala').text(falasSchool.fala1);
-            $('#segundaFala').text(falasSchool.fala2);
+            $("#primeiraFala").text(falasSchool.fala1);
+            $("#segundaFala").text(falasSchool.fala2);
 
-            respostaCorreta = 'fala3';
+            respostaCorreta = "fala3";
             falasAtuais = falasSchool;
             criarCartas(falasSchool);
             break;
 
-        case 'city':
+        case "city":
             let falasCity = {};
 
             falasCity = {
-                fala1: 'Hi, Where is the park?',
+                fala1: "Hi, Where is the park?",
                 fala2: "Hello, it's this way.",
-                fala3: 'Thank you!',
-                fala4: 'Hello, Do you know a good restaurant?',
-                fala5: 'Yes, Neil Dinners is a good one!',
-                fala6: 'Thank you, I will check on that.',
+                fala3: "Thank you!",
+                fala4: "Hello, Do you know a good restaurant?",
+                fala5: "Yes, Neil Dinners is a good one!",
+                fala6: "Thank you, I will check on that.",
                 fala7: "Hi, it's very nice here, isn't it?",
-                fala8: 'Yes, it’s very chill.',
-                fala9: "But is dangerous at night, don't go to that streets in these hours."
+                fala8: "Yes, it’s very chill.",
+                fala9: "But is dangerous at night, don't go to that streets in these hours.",
             };
 
-            $('#primeiraFala').text(falasCity.fala1);
-            $('#segundaFala').text(falasCity.fala2);
+            $("#primeiraFala").text(falasCity.fala1);
+            $("#segundaFala").text(falasCity.fala2);
 
-            respostaCorreta = 'fala3';
+            respostaCorreta = "fala3";
             falasAtuais = falasCity;
             criarCartas(falasCity);
             break;
-            
-        case 'beach':
+
+        case "beach":
             let falasBeach = {};
 
             falasBeach = {
-                fala1: 'The sun looks lovely today!',
-                fala2: 'It does! Let’s go to the beach?',
-                fala3: 'Of course, it’s a perfect day for it!',
-                fala4: 'Look! A crab!',
-                fala5: 'Those are some big pincers!',
-                fala6: 'I think he’s cute tho!',
-                fala7: 'These beach foods are too pricy!',
-                fala8: 'It’s better to bring food from home!',
-                fala9: 'Let’s do it next time!'
+                fala1: "The sun looks lovely today!",
+                fala2: "It does! Let’s go to the beach?",
+                fala3: "Of course, it’s a perfect day for it!",
+                fala4: "Look! A crab!",
+                fala5: "Those are some big pincers!",
+                fala6: "I think he’s cute tho!",
+                fala7: "These beach foods are too pricy!",
+                fala8: "It’s better to bring food from home!",
+                fala9: "Let’s do it next time!",
             };
 
-            $('#primeiraFala').text(falasBeach.fala1);
-            $('#segundaFala').text(falasBeach.fala2);
+            $("#primeiraFala").text(falasBeach.fala1);
+            $("#segundaFala").text(falasBeach.fala2);
 
-            respostaCorreta = 'fala3';
+            respostaCorreta = "fala3";
             falasAtuais = falasBeach;
             criarCartas(falasBeach);
             break;
 
-        case 'house':
+        case "house":
             //Cria o dicionário
             let falasHouse = {};
 
             //Adiciona as falas ao dicionário
             falasHouse = {
-                fala1: 'Mom! Where are my shoes?',
-                fala2: 'You might know!',
-                fala3: 'But how do i know if i’m asking?',
-                fala4: 'Dad, what do we have for dinner?',
-                fala5: 'Potatoes and beans.',
-                fala6: 'Again?',
-                fala7: 'I want to buy a house here, do you recommend it?',
-                fala8: 'I don’t know, I heard some bad things about this house.',
-                fala9: 'Ok, i will check on that.'
+                fala1: "Mom! Where are my shoes?",
+                fala2: "You might know!",
+                fala3: "But how do i know if i’m asking?",
+                fala4: "Dad, what do we have for dinner?",
+                fala5: "Potatoes and beans.",
+                fala6: "Again?",
+                fala7: "I want to buy a house here, do you recommend it?",
+                fala8: "I don’t know, I heard some bad things about this house.",
+                fala9: "Ok, i will check on that.",
             };
 
             //Faz a primeira e segunda fala aparecerem na tela
-            $('#primeiraFala').text(falasHouse.fala1);
-            $('#segundaFala').text(falasHouse.fala2);
+            $("#primeiraFala").text(falasHouse.fala1);
+            $("#segundaFala").text(falasHouse.fala2);
             //Define a resposta correta e as falas atuais
-            respostaCorreta = 'fala3';
+            respostaCorreta = "fala3";
             falasAtuais = falasHouse;
             criarCartas(falasHouse);
             break;
-    
-            //parte pro medium - Keren
-            
-        case 'food':
+
+        //Parte pro medium - Keren
+
+        case "food":
             let falasFood = {};
 
             falasFood = {
@@ -209,15 +206,15 @@ function tema(tema){
                 fala15: "That's part of the adventure, I think.",
             };
 
-            $('#primeiraFala').text(falasFood.fala1);
-            $('#segundaFala').text(falasFood.fala2);
+            $("#primeiraFala").text(falasFood.fala1);
+            $("#segundaFala").text(falasFood.fala2);
 
-            respostaCorreta = 'fala3';
+            respostaCorreta = "fala3";
             falasAtuais = falasFood;
             criarCartas(falasFood);
             break;
-            
-         case 'movies':
+
+        case "movies":
             let falasMovies = {};
 
             falasMovies = {
@@ -238,15 +235,15 @@ function tema(tema){
                 fala15: "That could be the reason, actually.",
             };
 
-            $('#primeiraFala').text(falasMovies.fala1);
-            $('#segundaFala').text(falasMovies.fala2);
+            $("#primeiraFala").text(falasMovies.fala1);
+            $("#segundaFala").text(falasMovies.fala2);
 
-            respostaCorreta = 'fala3';
+            respostaCorreta = "fala3";
             falasAtuais = falasMovies;
             criarCartas(falasMovies);
             break;
-            
-        case 'sports':
+
+        case "sports":
             let falasSports = {};
 
             falasSports = {
@@ -267,15 +264,15 @@ function tema(tema){
                 fala15: "That sounds like a solid routine.",
             };
 
-            $('#primeiraFala').text(falasSports.fala1);
-            $('#segundaFala').text(falasSports.fala2);
+            $("#primeiraFala").text(falasSports.fala1);
+            $("#segundaFala").text(falasSports.fala2);
 
-            respostaCorreta = 'fala3';
+            respostaCorreta = "fala3";
             falasAtuais = falasSports;
             criarCartas(falasSports);
             break;
 
-        case 'animals':
+        case "animals":
             let falasAnimals = {};
 
             falasAnimals = {
@@ -296,17 +293,17 @@ function tema(tema){
                 fala15: "Many people feel that way about them.",
             };
 
-            $('#primeiraFala').text(falasAnimals.fala1);
-            $('#segundaFala').text(falasAnimals.fala2);
+            $("#primeiraFala").text(falasAnimals.fala1);
+            $("#segundaFala").text(falasAnimals.fala2);
 
-            respostaCorreta = 'fala3';
+            respostaCorreta = "fala3";
             falasAtuais = falasAnimals;
             criarCartas(falasAnimals);
             break;
 
-            //parte pro hard - Gutemberg
-            
-        case 'job':
+        //Parte pro hard - Gutemberg
+
+        case "job":
             let falasJob = {};
 
             falasJob = {
@@ -330,18 +327,18 @@ function tema(tema){
                 fala18: "Have you discovered any good local markets?",
                 fala19: "There's one on Saturdays, but it's closed in winter.",
                 fala20: "You could also order online from local artisans.",
-                fala21: "I'll look into that, it sounds like a great idea."
+                fala21: "I'll look into that, it sounds like a great idea.",
             };
 
-            $('#primeiraFala').text(falasJob.fala1);
-            $('#segundaFala').text(falasJob.fala2);
+            $("#primeiraFala").text(falasJob.fala1);
+            $("#segundaFala").text(falasJob.fala2);
 
-            respostaCorreta = 'fala3';
+            respostaCorreta = "fala3";
             falasAtuais = falasJob;
             criarCartas(falasJob);
             break;
-        
-        case 'tech':
+
+        case "tech":
             let falasTech = {};
 
             falasTech = {
@@ -365,18 +362,18 @@ function tema(tema){
                 fala18: "Did you find out how the attack happened?",
                 fala19: "It was a phishing email sent to an employee.",
                 fala20: "Better training could prevent this in the future.",
-                fala21: "We're implementing that immediately."
+                fala21: "We're implementing that immediately.",
             };
 
-            $('#primeiraFala').text(falasTech.fala1);
-            $('#segundaFala').text(falasTech.fala2);
+            $("#primeiraFala").text(falasTech.fala1);
+            $("#segundaFala").text(falasTech.fala2);
 
-            respostaCorreta = 'fala3';
+            respostaCorreta = "fala3";
             falasAtuais = falasTech;
             criarCartas(falasTech);
             break;
 
-        case 'Music':
+        case "music":
             let falasMusic = {};
 
             falasMusic = {
@@ -400,13 +397,13 @@ function tema(tema){
                 fala18: "Have you explored sound design yet?",
                 fala19: "I'm slowly learning, but it's quite complex.",
                 fala20: "The possibilities are endless once you master it.",
-                fala21: "I'm enjoying the journey, even when it's difficult."
+                fala21: "I'm enjoying the journey, even when it's difficult.",
             };
 
-            $('#primeiraFala').text(falasMusic.fala1);
-            $('#segundaFala').text(falasMusic.fala2);
+            $("#primeiraFala").text(falasMusic.fala1);
+            $("#segundaFala").text(falasMusic.fala2);
 
-            respostaCorreta = 'fala3';
+            respostaCorreta = "fala3";
             falasAtuais = falasMusic;
             criarCartas(falasMusic);
             break;
@@ -414,7 +411,7 @@ function tema(tema){
 }
 tema(temaEscolhido);
 
-function verificar_fala(fala){
+function verificar_fala(fala) {
     if (jogoPausado) {
         return;
     }
@@ -429,26 +426,24 @@ function verificar_fala(fala){
         $(img).closest(".carta").addClass("respondida");
     }
 
-    if (fala == respostaCorreta){
+    if (fala == respostaCorreta) {
         $("#talk").text(falasAtuais[respostaCorreta]);
         $("#talk2").text("Correct!");
-        $("#balao1").css('background-color', 'green');
-        $("#balao1").css('color', 'white');
+        $("#balao1").css("background-color", "green");
+        $("#balao1").css("color", "white");
         pontos += 15;
-    }
-    else{
+    } else {
         $("#talk").text(falasAtuais[fala]);
         $("#talk2").text("Wrong!");
-        $("#balao1").css('background-color', 'darkred');
-        $("#balao1").css('color', 'white');
+        $("#balao1").css("background-color", "darkred");
+        $("#balao1").css("color", "white");
         pontos -= 15;
     }
 
     $("#pts").text(pontos);
 }
 
-
-// Pausa o jogo: escurece a tela, para o timer e bloqueia os botões
+// Pausa o jogo
 function pausar() {
     if (jogoPausado) {
         return;
@@ -457,13 +452,12 @@ function pausar() {
     jogoPausado = true;
     pararTimer();
 
-    // desativa as cartas e o botão de pause
+    //Desativa as cartas e o botão de pause
     $(".cartas button, .pause button").prop("disabled", true);
 
     $("#telaPause").css("display", "flex").hide().fadeIn(200);
 }
 
-// RESUME: volta a jogar com o mesmo tempo e os mesmos pontos
 function despausar() {
     jogoPausado = false;
 
@@ -473,7 +467,6 @@ function despausar() {
     iniciarTimer();
 }
 
-// RESTART: zera pontos e timer e começa uma nova rodada
 function reiniciar() {
     pararTimer();
 
@@ -485,7 +478,7 @@ function reiniciar() {
     // limpa o balão de resposta
     $("#talk").text("");
     $("#talk2").text("");
-    $("#balao1").css({ "background-color": "", "color": "" });
+    $("#balao1").css({ "background-color": "", color: "" });
 
     // embaralha as cartas de novo
     tema(temaEscolhido);
@@ -493,7 +486,6 @@ function reiniciar() {
     despausar();
 }
 
-// QUIT: volta para a tela de dificuldade sem salvar nada
 function sair() {
     pararTimer();
 
@@ -508,8 +500,3 @@ function sair() {
         window.location.href = "../dificuldades/dificuldades.html";
     }
 }
-
-// Liga os botões da tela de pause
-$(document).on("click", "#btnResume", despausar);
-$(document).on("click", "#btnRestart", reiniciar);
-$(document).on("click", "#btnQuit", sair);
