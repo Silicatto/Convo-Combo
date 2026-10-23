@@ -71,9 +71,12 @@ function criarCartas(falas) {
     $(".textoCarta").each(function (index) {
         $(this).text(falas[cartas[index]]);
 
-        $(this)
-            .siblings("img")
-            .attr("onclick", "verificar_fala('" + cartas[index] + "')");
+        let img = $(this).siblings("img");
+
+        img.removeAttr("data-respondida");
+        img.closest(".carta").removeClass("respondida");
+
+        img.attr("onclick", "verificar_fala('" + cartas[index] + "')");
     });
 }
 
