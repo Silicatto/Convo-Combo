@@ -1,6 +1,5 @@
 var respostaCorreta;
 var falasAtuais;
-var rodadaAtual = 1;
 var url = new URLSearchParams(window.location.search);
 var temaEscolhido = url.get("tema");
 var pontos = 0;
@@ -10,6 +9,7 @@ var tempo = TEMPO_INICIAL;
 var intervalo = null;
 var jogoPausado = false;
 
+// Mostra o tempo restante no formato m:ss
 function mostrarTempo() {
     var minutos = Math.floor(tempo / 60);
     var segundos = tempo % 60;
@@ -21,9 +21,10 @@ function mostrarTempo() {
     $("#timer").text(minutos + ":" + segundos);
 }
 
+// Liga o timer / continua de onde o tempo tava
 function iniciarTimer() {
     if (intervalo !== null || tempo <= 0) {
-        return;
+        return; // já está rodando ou o tempo acabou
     }
 
     intervalo = setInterval(function () {
@@ -36,11 +37,13 @@ function iniciarTimer() {
     }, 1000);
 }
 
+// Desliga o timer
 function pararTimer() {
     clearInterval(intervalo);
     intervalo = null;
 }
 
+// Só inicia o timer se estiver na tela do jogo
 if ($("#timer").length > 0) {
     mostrarTempo();
     iniciarTimer();
@@ -48,40 +51,41 @@ if ($("#timer").length > 0) {
 
 function criarCartas(falas) {
     let chaves = Object.keys(falas);
-    let chaveCorreta = "fala" + (rodadaAtual * 3);
 
-    respostaCorreta = chaveCorreta;
+    // Garante que a resposta correta esteja nas cartas
+    let cartas = ["fala3"];
 
-    let cartas = [chaveCorreta];
-
+    // Retira a fala3 para não escolhê-la novamente
     let outrasFalas = chaves.filter(function (chave) {
-        return chave != chaveCorreta;
+        return chave != "fala3";
     });
 
+    // Embaralha as outras falas
     outrasFalas.sort(function () {
         return Math.random() - 0.5;
     });
 
+    // Pega mais 5 falas aleatórias
     cartas = cartas.concat(outrasFalas.slice(0, 5));
 
+    // Embaralha as 6 cartas
     cartas.sort(function () {
         return Math.random() - 0.5;
     });
 
+    // Coloca as falas nas cartas
     $(".textoCarta").each(function (index) {
         $(this).text(falas[cartas[index]]);
 
-        let img = $(this).siblings("img");
-
-        img.removeAttr("data-respondida");
-        img.closest(".carta").removeClass("respondida");
-
-        img.attr("onclick", "verificar_fala('" + cartas[index] + "')");
+        $(this)
+            .siblings("img")
+            .attr("onclick", "verificar_fala('" + cartas[index] + "')");
     });
 }
 
 function tema(tema) {
     switch (tema) {
+        //Parte do easy - Kaíque
         case "school":
             let falasSchool = {};
 
@@ -102,6 +106,7 @@ function tema(tema) {
             $("#primeiraFala").text(falasSchool.fala1);
             $("#segundaFala").text(falasSchool.fala2);
 
+            respostaCorreta = "fala3";
             falasAtuais = falasSchool;
             criarCartas(falasSchool);
             break;
@@ -124,6 +129,7 @@ function tema(tema) {
             $("#primeiraFala").text(falasCity.fala1);
             $("#segundaFala").text(falasCity.fala2);
 
+            respostaCorreta = "fala3";
             falasAtuais = falasCity;
             criarCartas(falasCity);
             break;
@@ -146,13 +152,16 @@ function tema(tema) {
             $("#primeiraFala").text(falasBeach.fala1);
             $("#segundaFala").text(falasBeach.fala2);
 
+            respostaCorreta = "fala3";
             falasAtuais = falasBeach;
             criarCartas(falasBeach);
             break;
 
         case "house":
+            //Cria o dicionário
             let falasHouse = {};
 
+            //Adiciona as falas ao dicionário
             falasHouse = {
                 fala1: "Mom! Where are my shoes?",
                 fala2: "You might know!",
@@ -165,12 +174,16 @@ function tema(tema) {
                 fala9: "Ok, i will check on that.",
             };
 
+            //Faz a primeira e segunda fala aparecerem na tela
             $("#primeiraFala").text(falasHouse.fala1);
             $("#segundaFala").text(falasHouse.fala2);
-
+            //Define a resposta correta e as falas atuais
+            respostaCorreta = "fala3";
             falasAtuais = falasHouse;
             criarCartas(falasHouse);
             break;
+
+        //Parte pro medium - Keren
 
         case "food":
             let falasFood = {};
@@ -196,6 +209,7 @@ function tema(tema) {
             $("#primeiraFala").text(falasFood.fala1);
             $("#segundaFala").text(falasFood.fala2);
 
+            respostaCorreta = "fala3";
             falasAtuais = falasFood;
             criarCartas(falasFood);
             break;
@@ -224,6 +238,7 @@ function tema(tema) {
             $("#primeiraFala").text(falasMovies.fala1);
             $("#segundaFala").text(falasMovies.fala2);
 
+            respostaCorreta = "fala3";
             falasAtuais = falasMovies;
             criarCartas(falasMovies);
             break;
@@ -252,6 +267,7 @@ function tema(tema) {
             $("#primeiraFala").text(falasSports.fala1);
             $("#segundaFala").text(falasSports.fala2);
 
+            respostaCorreta = "fala3";
             falasAtuais = falasSports;
             criarCartas(falasSports);
             break;
@@ -280,9 +296,12 @@ function tema(tema) {
             $("#primeiraFala").text(falasAnimals.fala1);
             $("#segundaFala").text(falasAnimals.fala2);
 
+            respostaCorreta = "fala3";
             falasAtuais = falasAnimals;
             criarCartas(falasAnimals);
             break;
+
+        //Parte pro hard - Gutemberg
 
         case "job":
             let falasJob = {};
@@ -314,6 +333,7 @@ function tema(tema) {
             $("#primeiraFala").text(falasJob.fala1);
             $("#segundaFala").text(falasJob.fala2);
 
+            respostaCorreta = "fala3";
             falasAtuais = falasJob;
             criarCartas(falasJob);
             break;
@@ -348,6 +368,7 @@ function tema(tema) {
             $("#primeiraFala").text(falasTech.fala1);
             $("#segundaFala").text(falasTech.fala2);
 
+            respostaCorreta = "fala3";
             falasAtuais = falasTech;
             criarCartas(falasTech);
             break;
@@ -382,12 +403,12 @@ function tema(tema) {
             $("#primeiraFala").text(falasMusic.fala1);
             $("#segundaFala").text(falasMusic.fala2);
 
+            respostaCorreta = "fala3";
             falasAtuais = falasMusic;
             criarCartas(falasMusic);
             break;
     }
 }
-
 tema(temaEscolhido);
 
 function verificar_fala(fala) {
@@ -398,9 +419,8 @@ function verificar_fala(fala) {
     var img = document.querySelector('img[onclick*="' + fala + '"]');
 
     if (img && img.dataset.respondida === "true") {
-        return;
+        return; // já respondida, não pontua de novo
     }
-
     if (img) {
         img.dataset.respondida = "true";
         $(img).closest(".carta").addClass("respondida");
@@ -412,32 +432,6 @@ function verificar_fala(fala) {
         $("#balao1").css("background-color", "green");
         $("#balao1").css("color", "white");
         pontos += 15;
-
-        rodadaAtual++;
-
-        let totalDeFalas = Object.keys(falasAtuais).length;
-        let totalDeRodadas = totalDeFalas / 3;
-
-        if (rodadaAtual <= totalDeRodadas) {
-            let proximaPrimeira = "fala" + ((rodadaAtual * 3) - 2);
-            let proximaSegunda = "fala" + ((rodadaAtual * 3) - 1);
-
-            setTimeout(function () {
-                $("#primeiraFala").text(falasAtuais[proximaPrimeira]);
-                $("#segundaFala").text(falasAtuais[proximaSegunda]);
-
-                criarCartas(falasAtuais);
-
-                $("#talk").text("");
-                $("#talk2").text("");
-                $("#balao1").css({
-                    "background-color": "",
-                    color: ""
-                });
-            }, 900);
-        } else {
-            $("#talk2").text("You finished all the dialogues!");
-        }
     } else {
         $("#talk").text(falasAtuais[fala]);
         $("#talk2").text("Wrong!");
@@ -449,6 +443,7 @@ function verificar_fala(fala) {
     $("#pts").text(pontos);
 }
 
+// Pausa o jogo
 function pausar() {
     if (jogoPausado) {
         return;
@@ -457,6 +452,7 @@ function pausar() {
     jogoPausado = true;
     pararTimer();
 
+    //Desativa as cartas e o botão de pause
     $(".cartas button, .pause button").prop("disabled", true);
 
     $("#telaPause").css("display", "flex").hide().fadeIn(200);
@@ -476,15 +472,15 @@ function reiniciar() {
 
     tempo = TEMPO_INICIAL;
     pontos = 0;
-    rodadaAtual = 1;
-
     $("#pts").text(pontos);
     mostrarTempo();
 
+    // limpa o balão de resposta
     $("#talk").text("");
     $("#talk2").text("");
     $("#balao1").css({ "background-color": "", color: "" });
 
+    // embaralha as cartas de novo
     tema(temaEscolhido);
 
     despausar();
