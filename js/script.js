@@ -303,7 +303,7 @@ function tema(tema) {
 
         //Parte pro hard - Gutemberg
 
-        case "job":
+        case "jobs":
             let falasJob = {};
 
             falasJob = {
@@ -371,6 +371,47 @@ function tema(tema) {
             respostaCorreta = "fala3";
             falasAtuais = falasTech;
             criarCartas(falasTech);
+            break;
+
+        case "shopping":
+            let falasShopping = {};
+
+            falasShopping = {
+                fala1: "You've been receiving a lot of packages lately.",
+                fala2: "I've developed a habit of browsing online stores at night.",
+                fala3: "Aren't you worried about buying useless things?",
+                fala4: "You're right, I often fall for the advertising.",
+                fala5: "Maybe you should set a monthly spending limit.",
+                fala6: "That's smart, but self-control isn't easy.",
+                fala7: "I can help you review your cart before checkout.",
+
+                fala8: "I have no idea what to buy for my friend's birthday.",
+                fala9: "What are their main interests or hobbies?",
+                fala10: "They love photography, but already have all the gear.",
+                fala11: "Perhaps a workshop or experience would be better.",
+                fala12: "That's a wonderful idea, maybe a photography course.",
+                fala13: "Experiences often create more lasting memories.",
+                fala14: "You're right, I'll book something.",
+
+                fala15: "I'm trying to support local shops more often.",
+                fala16: "That's admirable, though it's not very convenient.",
+                fala17: "True, I sometimes visit several stores to find things.",
+                fala18: "Have you discovered any good local markets?",
+                fala19: "There's one on Saturdays, but it's closed in winter.",
+                fala20: "You could also order online from local artisans.",
+                fala21: "I'll look into that, it sounds like a great idea.",
+            };
+
+            $("#primeiraFala").text(falasShopping.fala1);
+
+            $("#segundaFala").text(falasShopping.fala2);
+
+            respostaCorreta = "fala3";
+
+            falasAtuais = falasShopping;
+
+            criarCartas(falasShopping);
+
             break;
 
         case "music":
