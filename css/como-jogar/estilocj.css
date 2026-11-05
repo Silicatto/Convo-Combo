@@ -40,7 +40,6 @@ p {
     font-family: "Pragmatica";
     font-size: 35px;
     font-weight: lighter;
-    position: absolute;
 }
 
 a {
@@ -57,6 +56,13 @@ a {
     color: #2d5077;
 }
 
+.textbutao {
+    vertical-align: middle;
+    line-height: 1;
+    font-family: "Pragmatica";
+    font-size: 35px;
+}
+
 .coisasmais {
     top: 25%;
     right: 12%;
@@ -64,31 +70,49 @@ a {
 }
 
 .botao1 {
-    font-weight: bold;
-    top: 72.5%;
-    left: 2.5%;
+    display: block;
+    margin: 0;
 }
 
 .botao2 {
-    font-weight: bold;
-    top: 82.5%;
-    left: 2.5%;
+    display: block;
+    margin: 0;
 }
 
-.botaoback {
-    transform: rotate(180deg);
+.botao1 a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #2d5077;
+    font-family: "Pragmatica";
+    font-size: 35px;
 }
 
-.botaobackk{
-    transform: rotate(-90deg);
+.botao1 img {
+    display: block;
 }
 
-.botaoproxk{
-    transform: rotate(90deg);
+.botao2 a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #2d5077;
+    font-family: "Pragmatica";
+    font-size: 35px;
 }
 
-.botaohome {
-    transform: rotate(-90deg);
+.botao2 img {
+    display: block;
+}
+
+.botao-back {
+    rotate: -90deg;
+}
+
+.botao-prox {
+    rotate: 90deg;
 }
 
 .tempo {
@@ -100,13 +124,13 @@ a {
     transform: rotate(-15deg);
     display: inline-block;
     position: absolute;
-    top: 22.5%; 
+    top: 22.5%;
     right: 20%;
-    text-shadow: 
-    -2px -2px 0 #2d5077,  
-     2px -2px 0 #2d5077,  
-    -2px  2px 0 #2d5077,  
-     2px  2px 0 #2d5077;
+    text-shadow:
+        -2px -2px 0 #2d5077,
+        2px -2px 0 #2d5077,
+        -2px 2px 0 #2d5077,
+        2px 2px 0 #2d5077;
 }
 
 .papel {
