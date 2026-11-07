@@ -47,8 +47,17 @@ a {
     color: #2d5077;
 }
 
+.caixa-dica {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
 .texto {
-    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     letter-spacing: -1px;
     color: #2d5077;
 }
@@ -140,13 +149,6 @@ a {
     top: 37.5%;
     right: 12.5%;
     position: absolute;
-}
-
-.cartas {
-    top: 20%;
-    right: 7.5%;
-    position: absolute;
-    height: 50%;
 }
 
 .certinho {
